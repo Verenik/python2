@@ -1,4 +1,4 @@
-def calculator(func):
+def ref_calculator(func):
     def wrapper(expression):
         try:
             result = func(expression)
@@ -7,7 +7,7 @@ def calculator(func):
             print(f"Error: {e}. Check the example.")
     return wrapper
 
-@robust_calculator
+@ref_calculator
 def calculate(expression):
     return eval(expression)
 
